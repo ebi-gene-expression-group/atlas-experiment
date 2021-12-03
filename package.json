@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/expression-atlas-experiment-page",
-  "version": "1.15.4",
+  "version": "1.16.0",
   "description": "Expression Atlas experiment page frontend e.g. https://www.ebi.ac.uk/gxa/experiments/E-MTAB-513",
   "main": "lib/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@ebi-gene-expression-group/expression-atlas-disclaimers": "^1.2.0",
-    "@ebi-gene-expression-group/expression-atlas-heatmap-highcharts": "^5.4.0",
+    "@ebi-gene-expression-group/expression-atlas-heatmap-highcharts": "^5.5.0",
     "lodash": "^4.17.15",
     "pluralize": "^8.0.0",
     "prop-types": "^15.7.2",
