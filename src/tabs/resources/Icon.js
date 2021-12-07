@@ -4,8 +4,8 @@ import URI from 'urijs'
 import ResourcePropTypes from './ResourcePropTypes.js'
 
 const RESOURCE_ICONS = [
-  [`icon-txt`, require(`./assets/download-txt.png`)],
-  [`icon-xml`, require(`./assets/download-xml.png`)],
+  [`icon-txt`, require(`./assets/txt.png`)],
+  [`icon-xml`, require(`./assets/xml.png`)],
   [`icon-pdf`, require(`./assets/pdf.png`)],
   [`icon-geo`, require(`./assets/geo.png`)],
   [`icon-ena`, require(`./assets/ena.png`)],
