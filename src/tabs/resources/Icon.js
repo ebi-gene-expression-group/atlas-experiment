@@ -4,7 +4,6 @@ import URI from 'urijs'
 import ResourcePropTypes from './ResourcePropTypes.js'
 
 const RESOURCE_ICONS = [
-  [`icon-pdf`, require(`./assets/pdf.png`)],
   [`icon-geo`, require(`./assets/geo.png`)],
   [`icon-ena`, require(`./assets/ena.png`)],
   [`icon-ega`, require(`./assets/ega.png`)],
@@ -36,9 +35,9 @@ const htmlEntity = (type) => {
 
 const icon = (type, pathToResources) => {
   const maybeImg = RESOURCE_ICONS.find(e => (type === e[0]))
-
   return (
-    maybeImg && <img style={{marginRight: `0.5rem`, height: `32px`}} src={URI(maybeImg[1], pathToResources)} />
+    maybeImg ? <img style={{marginRight: `0.5rem`, height: `32px`}} src={URI(maybeImg[1], pathToResources)} /> :
+      <i style={{marginRight: `0.5rem`, fontSize: `x-large`}} className={`icon icon-fileformats ${type}`} />
   )
 }
 
@@ -46,7 +45,7 @@ const Icon = ({type, pathToResources}) => {
   return (
     htmlEntity(type)
     || icon(type, pathToResources)
-    || <span style={{marginLeft: `0.5rem`,marginRight: `0.5rem`}}> &middot; </span>
+    || <span style={{marginLeft: `0.5rem`, marginRight: `0.5rem`}}> &middot; </span>
   )
 }
 
