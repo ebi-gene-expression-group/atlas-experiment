@@ -84,24 +84,27 @@ const ReadOnlyGrouping = ({text, selection}) => (
 )
 ReadOnlyGrouping.propTypes = GroupingPropTypes
 
-const CheckboxGrouping = ({name,text, selection, onToggle}) => {
-	return   <div className={`checkboxGrouping ` + selection}>
+const CheckboxGrouping = ({name, text, selection, onToggle}) => {
+	return <div className={`checkboxGrouping ` + selection}>
 		<input type="checkbox"
 					 value={text}
 					 onChange={onToggle}
-					 checked={[SELECTION.SELECTED, SELECTION.PARTIAL].indexOf(selection)>-1}
-					 ref={checkbox => {checkbox ? checkbox.indeterminate = selection === SELECTION.PARTIAL : null}}
+					 checked={[SELECTION.SELECTED, SELECTION.PARTIAL].indexOf(selection) > -1}
+					 ref={checkbox => {
+						 checkbox ? checkbox.indeterminate = selection === SELECTION.PARTIAL : null
+					 }}
 		/>
-		{ text
+		{text
 			? <span>
         {text}
       </span>
-			: <span style={{opacity: 0.5, fontStyle:`italic`}}>
+			: <span style={{opacity: 0.5, fontStyle: `italic`}}>
 					{humanize(name)} not specified
       </span>
 		}
 	</div>
 }
+
 CheckboxGrouping.propTypes = GroupingPropTypes
 
 const PlainSectionBody = ({name,groupings, selectedIds, onNewSelectedIds}) => (
