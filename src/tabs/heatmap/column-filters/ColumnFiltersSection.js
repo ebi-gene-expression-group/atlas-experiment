@@ -12,9 +12,7 @@ const headerName = (name) => (
   + `: `
 )
 
-const humanize = (name)=> (
-	name.split(`_`).join(` `).toLowerCase()
-)
+const humanize = name => name.replaceAll(`_`, ` `).toLowerCase()
 
 const CommonPropTypes = {
   name: ColumnGroupPropTypes.name,
