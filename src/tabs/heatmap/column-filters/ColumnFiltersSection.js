@@ -104,7 +104,7 @@ const CheckboxGrouping = ({name,text, selection, onToggle}) => {
 }
 CheckboxGrouping.propTypes = GroupingPropTypes
 
-const PlainSectionBody = ({groupings, selectedIds, onNewSelectedIds}) => (
+const PlainSectionBody = ({name,groupings, selectedIds, onNewSelectedIds}) => (
   <div className="sectionBody">
     {
       groupings
