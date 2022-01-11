@@ -83,7 +83,6 @@ const ReadOnlyGrouping = ({text, selection}) => (
   </span>
 )
 ReadOnlyGrouping.propTypes = GroupingPropTypes
-
 const CheckboxGrouping = ({name, text, selection, onToggle}) => {
 	return <div className={`checkboxGrouping ` + selection}>
 		<input type="checkbox"
@@ -95,10 +94,10 @@ const CheckboxGrouping = ({name, text, selection, onToggle}) => {
 					 }}
 		/>
 		{text
-			? <span>
+				? <span>
         {text}
       </span>
-			: <span style={{opacity: 0.5, fontStyle: `italic`}}>
+				: <span style={{opacity: 0.5, fontStyle: `italic`}}>
 					{humanize(name)} not specified
       </span>
 		}
