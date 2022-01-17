@@ -14,12 +14,13 @@
     "Elisabet Barrera <barrera@ebi.ac.uk>",
     "Wojciech Bażant <wbazant@ebi.ac.uk>",
     "Lingyun Zhao <lingyun@ebi.ac.uk>",
-    "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>"
+    "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>",
+    "Upendra Kumbham <ukumbham@ebi.ac.uk>"
   ],
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gxa/atlas-experiment.git"
+    "url": "git+https://github.com/ebi-gene-expression-group/atlas-experiment.git"
   },
   "dependencies": {
     "@ebi-gene-expression-group/expression-atlas-disclaimers": "^1.2.0",
@@ -47,12 +48,12 @@
     "@babel/polyfill": "^7.6.0",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
+    "@ebi-gene-expression-group/eslint-config": "^2.4.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
     "enzyme": "^3.10.0",
     "eslint": "^6.5.1",
-    "eslint-config-gene-expression": "^0.5.0",
     "file-loader": "^4.2.0",
     "image-webpack-loader": "^6.0.0",
     "imports-loader": "^0.8.0",
@@ -66,9 +67,9 @@
     "whatwg-fetch": "^3.0.0"
   },
   "bugs": {
-    "url": "https://github.com/gxa/atlas-experiment/issues"
+    "url": "https://github.com/ebi-gene-expression-group/atlas-experiment/issues"
   },
-  "homepage": "https://github.com/gxa/atlas-experiment#readme",
+  "homepage": "https://github.com/ebi-gene-expression-group/atlas-experiment#readme",
   "directories": {
     "lib": "lib"
   }

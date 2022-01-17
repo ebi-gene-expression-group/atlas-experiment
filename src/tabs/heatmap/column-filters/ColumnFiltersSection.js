@@ -12,6 +12,8 @@ const headerName = (name) => (
   + `: `
 )
 
+const humanize = name => name.replaceAll(`_`, ` `).toLowerCase()
+
 const CommonPropTypes = {
   name: ColumnGroupPropTypes.name,
   availableIds: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -81,28 +83,30 @@ const ReadOnlyGrouping = ({text, selection}) => (
   </span>
 )
 ReadOnlyGrouping.propTypes = GroupingPropTypes
-
-const CheckboxGrouping = ({text, selection, onToggle}) => (
-  <div className={`checkboxGrouping ` + selection}>
-    <input type="checkbox"
-      value={text}
-      onChange={onToggle}
-      checked={[SELECTION.SELECTED, SELECTION.PARTIAL].indexOf(selection)>-1}
-      ref={checkbox => {checkbox ? checkbox.indeterminate = selection === SELECTION.PARTIAL : null}}
-    />
-    { text
-      ? <span>
+const CheckboxGrouping = ({name, text, selection, onToggle}) => {
+	return <div className={`checkboxGrouping ` + selection}>
+		<input type="checkbox"
+					 value={text}
+					 onChange={onToggle}
+					 checked={[SELECTION.SELECTED, SELECTION.PARTIAL].indexOf(selection) > -1}
+					 ref={checkbox => {
+						 checkbox ? checkbox.indeterminate = selection === SELECTION.PARTIAL : null
+					 }}
+		/>
+		{text
+				? <span>
         {text}
       </span>
-      : <span style={{opacity: 0.5, fontStyle:`italic`}}>
-          missing
+				: <span style={{opacity: 0.5, fontStyle: `italic`}}>
+					{humanize(name)} not specified
       </span>
-    }
-  </div>
-)
+		}
+	</div>
+}
+
 CheckboxGrouping.propTypes = GroupingPropTypes
 
-const PlainSectionBody = ({groupings, selectedIds, onNewSelectedIds}) => (
+const PlainSectionBody = ({name,groupings, selectedIds, onNewSelectedIds}) => (
   <div className="sectionBody">
     {
       groupings
@@ -111,7 +115,7 @@ const PlainSectionBody = ({groupings, selectedIds, onNewSelectedIds}) => (
           g1[0].localeCompare(g2[0])
         ))
         .map((grouping) => (
-          <CheckboxGrouping {...makeGroupingProps({selectedIds,onNewSelectedIds}, grouping)} />
+					<CheckboxGrouping {...makeGroupingProps({selectedIds,onNewSelectedIds}, grouping)} name={name} />
         ))
     }
   </div>
@@ -166,7 +170,7 @@ class SectionBodyWithCollapsableLinks extends React.Component {
   }
 
   render() {
-    const { groupings, selectedIds, onNewSelectedIds } = this.props
+    const { name, groupings, selectedIds, onNewSelectedIds } = this.props
     const { showUnselected, showPartiallySelected} = this.state
     const unselectedGroupingsCount = this._countUnselected()
     const partiallySelectedGroupingsCount = this._countPartiallySelected()
@@ -187,7 +191,7 @@ class SectionBodyWithCollapsableLinks extends React.Component {
               g1[0].localeCompare(g2[0])
             ))
             .map((grouping) => (
-              <CheckboxGrouping {...makeGroupingProps({selectedIds,onNewSelectedIds}, grouping)} />
+							<CheckboxGrouping {...makeGroupingProps({selectedIds,onNewSelectedIds}, grouping)} name={name} />
             ))
         }
         { !!unselectedGroupingsCount &&
