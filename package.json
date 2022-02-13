@@ -4,15 +4,10 @@
   "description": "Expression Atlas experiment page frontend e.g. https://www.ebi.ac.uk/gxa/experiments/E-MTAB-513",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "webpack-dev-server -d",
-    "prepack": "rm -rf lib && babel src -d lib  --ignore '**/*.less' --copy-files",
-    "postversion": "npm publish",
-    "postpublish": "git push && git push --tags"
+    "prepare": "rm -rf lib && babel src -d lib  --ignore '**/*.less' --copy-files"
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
   "collaborators": [
-    "Elisabet Barrera <barrera@ebi.ac.uk>",
-    "Wojciech Bażant <wbazant@ebi.ac.uk>",
     "Lingyun Zhao <lingyun@ebi.ac.uk>",
     "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>",
     "Upendra Kumbham <ukumbham@ebi.ac.uk>"
@@ -23,8 +18,8 @@
     "url": "git+https://github.com/ebi-gene-expression-group/atlas-experiment.git"
   },
   "dependencies": {
-    "@ebi-gene-expression-group/expression-atlas-disclaimers": "^1.2.0",
-    "@ebi-gene-expression-group/expression-atlas-heatmap-highcharts": "^5.5.0",
+    "@ebi-gene-expression-group/expression-atlas-disclaimers": "^1.4.0",
+    "@ebi-gene-expression-group/expression-atlas-heatmap-highcharts": "^5.7.0",
     "lodash": "^4.17.15",
     "pluralize": "^8.0.0",
     "prop-types": "^15.7.2",
