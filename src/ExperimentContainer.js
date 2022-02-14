@@ -112,6 +112,7 @@ const ExperimentContainerRouter = ({
     },
     {
       isDifferential: experimentType.toLowerCase().includes(`differential`),
+      isProteomics: experimentType.toLowerCase().includes(`proteomics`),
       isRnaSeq: experimentType.toLowerCase().replace(`_`, ``).includes(`rnaseq`)
     }
   )

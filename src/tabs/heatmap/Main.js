@@ -60,6 +60,7 @@ Main.propTypes = {
   experimentAccession: PropTypes.string.isRequired,
   accessKey: PropTypes.string,
   isDifferential: PropTypes.bool.isRequired,
+  isProteomics: PropTypes.bool.isRequired,
   isRnaSeq: PropTypes.bool.isRequired,
   atlasUrl: PropTypes.string.isRequired,
   species: PropTypes.string.isRequired,
