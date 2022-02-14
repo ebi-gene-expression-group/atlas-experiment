@@ -1,0 +1,29 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <title>Experiment page demo</title>
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+
+    <!-- <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/theme-atlas.css" type="text/css" media="all"> -->
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/customized-bootstrap-3.3.5.css">
+</head>
+<body>
+<div id="experiment-page"></div>
+</body>
+
+<script src="../dist/vendors.bundle.js"></script>
+<script src="../dist/experimentPage.bundle.js"></script>
+
+<script type="text/javascript">
+  experimentPage.render({
+    atlasUrl: 'http://localhost:8080/gxa/',
+    // pathToResources: '../dist/',
+    content: {"experimentAccession":"E-PROT-39","experimentType":"PROTEOMICS_DIFFERENTIAL","accessKey":"","species":"homo sapiens","disclaimer":"","tabs":[{"type":"heatmap","name":"Results","props":{"groups":[{"name":"COMPARISON_NAME","primary":true,"selected":"all","groupings":[["\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027octogenarian age bracket\u0027",["g2_g1"]],["\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027sexagenarian age bracket\u0027",["g4_g3"]]]},{"name":"DISEASE","primary":false,"selected":"all","groupings":[]},{"name":"CLINICAL_INFORMATION","primary":false,"selected":"all","groupings":[]},{"name":"ORGANISM","primary":false,"selected":"all","groupings":[]},{"name":"INDIVIDUAL","primary":false,"selected":"all","groupings":[]},{"name":"AGE","primary":false,"selected":"all","groupings":[]},{"name":"DEVELOPMENTAL_STAGE","primary":false,"selected":"all","groupings":[]},{"name":"SEX","primary":false,"selected":"all","groupings":[]},{"name":"ORGANISM_PART","primary":false,"selected":"all","groupings":[]}],"genesDistributedByCutoffUrl":"json/experiments/E-PROT-39/genedistribution?experimentType\u003dPROTEOMICS_DIFFERENTIAL","availableDataUnits":[]}},{"type":"resources","name":"Plots","props":{"url":"json/experiments/E-PROT-39/resources/PLOTS"}},{"type":"experiment-design","name":"Experiment Design","props":{"table":{"headers":[{"name":"","values":[]},{"name":"Sample Characteristics","values":["organism","individual","age","developmental stage","sex","disease","organism part"]},{"name":"Experimental Variables","values":["disease","clinical information"]}],"data":[]},"downloadUrl":"experiments-content/E-PROT-39/resources/experiment-design"}},{"type":"multipart","name":"Supplementary Information","props":{"sections":[{"type":"static-table","name":"Analysis Methods","props":{"data":[["Samples used in this study","Data included in this study is based on the re-analysis of raw mass spectrometry data originally submitted to the PRIDE database."],["Data processing protocol","Raw mass spectrometry data was manually curated in order to map the raw files to the samples (see “Experimental Design” tab) and then processed using MaxQuant. The output (pre-processed) intensities were then normalised, proteins mapped to Ensembl gene IDs and filtered results (post-processed) were uploaded to Expression Atlas."],["Post-processing analysis","Protein groups with contaminants, reverse decoys and with no mappings or mapping to more than one Ensembl gene IDs were removed.  Protein groups with more than 50% sample replicates having zero corrected reporter intensities were removed. Protein abundance values were normalized per sample by “parts per billion”. Differential expression values were calculated using MSstatsTMT package."],["Protein to Gene Mapping","The R package ‘mygene’ (version 1.20.0) was used to map SwissProt accessions to Ensembl gene ID, gene symbol. The data resource used was Ensembl 99/Genome assembly: GRCh38 (Genome Reference Consortium Human Reference 38)."]]}},{"type":"resources","name":"Resources","props":{"url":"json/experiments/E-PROT-39/resources/SUPPLEMENTARY_INFORMATION"}}]}},{"type":"resources","name":"Downloads","props":{"url":"json/experiments/E-PROT-39/resources/DATA"}}]},
+    target: "experiment-page"
+  });
+</script>
+
+</html>
