@@ -158,10 +158,10 @@ const defaultRegulation = ({isDifferential}) => (
     : `OFF`
 )
 
-const defaultCutoff = ({isDifferential, isRnaSeq}) => (
+const defaultCutoff = ({isDifferential, isProteomics, isRnaSeq}) => (
   isDifferential
     ? {
-      foldChange: 1.0,
+      foldChange: isProteomics ? 0.5 : 1.0,
       pValue: 0.05
     }
     : {
