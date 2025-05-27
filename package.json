@@ -4,7 +4,8 @@
   "description": "Expression Atlas experiment page frontend e.g. https://www.ebi.ac.uk/gxa/experiments/E-MTAB-513",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "rm -rf lib && babel src -d lib  --ignore '**/*.less' --copy-files"
+    "prepare": "rm -rf lib && babel src -d lib  --ignore '**/*.less' --copy-files",
+    "demo": "webpack-dev-server"
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
   "collaborators": [
@@ -67,5 +68,8 @@
   "homepage": "https://github.com/ebi-gene-expression-group/atlas-experiment#readme",
   "directories": {
     "lib": "lib"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
