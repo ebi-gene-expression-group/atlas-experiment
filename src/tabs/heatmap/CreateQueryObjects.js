@@ -199,7 +199,7 @@ const _validateOrElse = (condition, defaultValue, value) => (
 const looksLikeEncodedArray = (v) => v.match(/\[.*\]/)
 
 const fromConfigAndQuery = (config, query) => ({
-  specific: decode(query.specific , true),
+  specific: decode(query.specific , false),
   geneQuery: decode(query.geneQuery , makeIntoGeneQueryFormat , looksLikeEncodedArray),
   selectedColumnIds:
     uniq(
