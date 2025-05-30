@@ -13,7 +13,7 @@ const ResourcesSection = ({values, pathToResources, atlasUrl}) => {
   )))
 
   return (
-    <div className="row column expanded margin-top-large">
+    <div>
       <ul style={{listStyle: `none`}}>
         {
           subsections.filter(el=>el).length < 2
@@ -29,10 +29,8 @@ const ResourcesSection = ({values, pathToResources, atlasUrl}) => {
             ))
             : subsections.map((subsectionName, ix) => (
               <li key={ix}>
-                <ul style={{listStyle: `none`}} className="margin-left-none margin-bottom-medium">
-                  <i>{
-                    subsectionName}
-                  </i>
+                <ul style={{listStyle: `none`, marginLeft: `0rem`}} >
+                  <i>{subsectionName}</i>
                   {
                     values.filter((value) => (
                       subsectionName === value.group
@@ -92,8 +90,7 @@ DisclaimerWrapper.propTypes = {
 
 class ResourcesTab extends Component {
   render() {
-    const {resourcesFetch, atlasUrl, pathToResources, disclaimer} = this.props
-
+    const {resourcesFetch, atlasUrl, pathToResources, disclaimer, experimentAccession} = this.props
     if (resourcesFetch.pending) {
       return (
         <div className={`row column expanded margin-top-large`}>
@@ -108,10 +105,20 @@ class ResourcesTab extends Component {
       )
     } else if (resourcesFetch.fulfilled) {
       return (
+        resourcesFetch.value.length >= 1 &&
         <DisclaimerWrapper disclaimer={disclaimer}>
-          <ResourcesSection
-            values={resourcesFetch.value}
-            {...{ pathToResources, atlasUrl }} />
+          <div className={`small-12 columns margin-bottom-xlarge`}>
+            <h3 key={`title`}>Via FTP</h3>
+            <span>You can download data for this experiment in Expression Atlas through our <a
+              href={`https://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/experiments/${experimentAccession}`}>{`FTP site`}</a>
+            </span>
+          </div>
+          <div className={`small-12 columns margin-bottom-xlarge`}>
+            <h3 key={`title`}>Metadata/Result files</h3>
+            <ResourcesSection
+              values={resourcesFetch.value}
+              {...{pathToResources, atlasUrl}} />
+          </div>
         </DisclaimerWrapper>
       )
     }
