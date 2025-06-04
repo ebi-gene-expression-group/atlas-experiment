@@ -108,7 +108,7 @@ class ResourcesTab extends Component {
           <div className={`small-12 columns margin-bottom-xlarge`}>
             <h3 key={`title`}>Via FTP</h3>
             <span>You can download data for this experiment in Expression Atlas through our <a
-              href={`https://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/experiments/${experimentAccession}`}>{`FTP site`}</a>
+              href={`https://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/experiments/${experimentAccession}`}>{`FTP site`}</a>.
             </span>
           </div>
           <div className={`small-12 columns margin-bottom-xlarge`}>
