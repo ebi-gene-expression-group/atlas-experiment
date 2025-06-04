@@ -1,6 +1,6 @@
 {
   "name": "@ebi-gene-expression-group/expression-atlas-experiment-page",
-  "version": "1.19.1",
+  "version": "1.19.2",
   "description": "Expression Atlas experiment page frontend e.g. https://www.ebi.ac.uk/gxa/experiments/E-MTAB-513",
   "main": "lib/index.js",
   "scripts": {
