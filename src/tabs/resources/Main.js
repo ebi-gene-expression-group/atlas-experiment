@@ -13,48 +13,44 @@ const ResourcesSection = ({values, pathToResources, atlasUrl}) => {
   )))
 
   return (
-    <div className="row column expanded margin-top-large">
-      <ul style={{listStyle: `none`}}>
-        {
-          subsections.filter(el=>el).length < 2
-            ? values.map((value, ix, self) => (
-              <li key={ix}>
-                <a href={URI(value.url, atlasUrl)}>
-                  <p>
-                    <Icon type={value.type} {...{pathToResources}}  />
-                    {value.description}
-                  </p>
-                </a>
-              </li>
-            ))
-            : subsections.map((subsectionName, ix) => (
-              <li key={ix}>
-                <ul style={{listStyle: `none`}} className="margin-left-none margin-bottom-medium">
-                  <i>{
-                    subsectionName}
-                  </i>
-                  {
-                    values.filter((value) => (
-                      subsectionName === value.group
+    <ul style={{listStyle: `none`, marginLeft: `0rem`}}>
+      {
+        subsections.filter(el=>el).length < 2
+          ? values.map((value, ix, self) => (
+            <li key={ix}>
+              <a href={URI(value.url, atlasUrl)}>
+                <p>
+                  <Icon type={value.type} {...{pathToResources}}  />
+                  {value.description}
+                </p>
+              </a>
+            </li>
+          ))
+          : subsections.map((subsectionName, ix) => (
+            <li key={ix}>
+              <ul style={{listStyle: `none`, marginLeft: `0rem`}} >
+                <i>{subsectionName}</i>
+                {
+                  values.filter((value) => (
+                    subsectionName === value.group
+                  ))
+                    .map((value, jx, self) => (
+                      <li key={jx} className="margin-left-large">
+                        <a href={URI(value.url, atlasUrl)}>
+                          <div>
+                            <p>
+                              <Icon type={value.type} {...{pathToResources}}/> {value.description}
+                            </p>
+                          </div>
+                        </a>
+                      </li>
                     ))
-                      .map((value, jx, self) => (
-                        <li key={jx} className="margin-left-large">
-                          <a href={URI(value.url, atlasUrl)}>
-                            <div>
-                              <p>
-                                <Icon type={value.type} {...{pathToResources}}/> {value.description}
-                              </p>
-                            </div>
-                          </a>
-                        </li>
-                      ))
-                  }
-                </ul>
-              </li>
-            ))
-        }
-      </ul>
-    </div>
+                }
+              </ul>
+            </li>
+          ))
+      }
+    </ul>
   )
 }
 
@@ -92,8 +88,7 @@ DisclaimerWrapper.propTypes = {
 
 class ResourcesTab extends Component {
   render() {
-    const {resourcesFetch, atlasUrl, pathToResources, disclaimer} = this.props
-
+    const {resourcesFetch, atlasUrl, pathToResources, disclaimer, experimentAccession} = this.props
     if (resourcesFetch.pending) {
       return (
         <div className={`row column expanded margin-top-large`}>
@@ -108,10 +103,20 @@ class ResourcesTab extends Component {
       )
     } else if (resourcesFetch.fulfilled) {
       return (
+        resourcesFetch.value.length >= 1 &&
         <DisclaimerWrapper disclaimer={disclaimer}>
-          <ResourcesSection
-            values={resourcesFetch.value}
-            {...{ pathToResources, atlasUrl }} />
+          <div className={`small-12 columns margin-bottom-xlarge`}>
+            <h3 key={`title`}>Via FTP</h3>
+            <span>You can download data for this experiment in Expression Atlas through our <a
+              href={`https://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/experiments/${experimentAccession}`}>{`FTP site`}</a>.
+            </span>
+          </div>
+          <div className={`small-12 columns margin-bottom-xlarge`}>
+            <h3 key={`title`}>Metadata/Result files</h3>
+            <ResourcesSection
+              values={resourcesFetch.value}
+              {...{pathToResources, atlasUrl}} />
+          </div>
         </DisclaimerWrapper>
       )
     }
