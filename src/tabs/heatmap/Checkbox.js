@@ -8,7 +8,7 @@ class Checkbox extends React.Component {
 
     render() {
       return (
-        <div className="margin-top-large">
+        <div className="margin-top-large" style={{"visibility": this.props.isVisible}}>
           <input
             type="checkbox"
             checked={this.props.value}
@@ -24,7 +24,8 @@ class Checkbox extends React.Component {
 
 Checkbox.propTypes = {
   value: PropTypes.bool.isRequired,
-  onChangeValue: PropTypes.func.isRequired
+  onChangeValue: PropTypes.func.isRequired,
+  isVisible: PropTypes.string.isRequired
 }
 
 export default Checkbox

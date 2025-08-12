@@ -143,6 +143,7 @@ class SidebarAndModal extends React.Component {
         </div>
 
         <Specificity
+          isVisible={this.props.queryObjects.geneQuery.length > 0 ? `hidden` : `visible`}
           specific={this.props.queryObjects.specific}
           onChangeSpecific={onChangeProperty.bind(null, `specific`)}/>
         {showRegulation &&
