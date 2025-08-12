@@ -2,41 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 class Checkbox extends React.Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      isChecked: this.props.value,
+    toggleCheckbox = () => {
+      this.props.onChangeValue(!this.props.value)
     }
-  }
 
-  toggleCheckbox () {
-    this.setState({
-      isChecked: !this.state.isChecked,
-    })
-
-    this.props.onChangeValue(!this.state.isChecked)
-  }
-
-  render() {
-    return (
-      <div className="margin-top-large">
-        <input type="checkbox"
-          checked={this.state.isChecked}
-          name={`menu-item-${this.state.isChecked}`}
-          id={`menu-item-${this.state.isChecked}`}
-          onChange={this.toggleCheckbox.bind(this)}
-        />
-        <label>
-                    Most specific
-        </label>
-      </div>
-    )
-  }
+    render() {
+      return (
+        <div className="margin-top-large">
+          <input
+            type="checkbox"
+            checked={this.props.value}
+            name={`menu-item-${this.props.value}`}
+            id={`menu-item-${this.props.value}`}
+            onChange={this.toggleCheckbox}
+          />
+          <label>Most specific</label>
+        </div>
+      )
+    }
 }
 
 Checkbox.propTypes = {
-  value: PropTypes.any.isRequired,
+  value: PropTypes.bool.isRequired,
   onChangeValue: PropTypes.func.isRequired
 }
 
