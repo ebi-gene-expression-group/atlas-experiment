@@ -30,7 +30,7 @@ const Main = (props) => {
           queryObjects={queryObjects}
           onChangeQueryObjects={ (newQueryObjects) => {
             //if user select a specific gene, then disable most-specific
-            newQueryObjects.specific = newQueryObjects.geneQuery.length >= 1 ? false : newQueryObjects.specific
+            newQueryObjects.specific ||= newQueryObjects.geneQuery.length < 1
 
             props.history.push(Object.assign({},
               props.location,
