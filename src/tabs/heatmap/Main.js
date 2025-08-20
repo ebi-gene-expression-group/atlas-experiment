@@ -29,6 +29,9 @@ const Main = (props) => {
           availableDataUnits={props.availableDataUnits}
           queryObjects={queryObjects}
           onChangeQueryObjects={ (newQueryObjects) => {
+            //if user select a specific gene, then disable most-specific
+            newQueryObjects.specific ||= newQueryObjects.geneQuery.length < 1
+
             props.history.push(Object.assign({},
               props.location,
               {search: queryStringUtils.stringify(queryFromQueryObjects(props, newQueryObjects))}
