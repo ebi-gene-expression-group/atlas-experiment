@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib  --ignore '**/*.less' --copy-files",
-    "demo": "webpack-dev-server"
+    "demo": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server"
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
   "collaborators": [
