@@ -1,11 +1,11 @@
 {
   "name": "@ebi-gene-expression-group/expression-atlas-experiment-page",
-  "version": "1.20.1",
+  "version": "1.21.0",
   "description": "Expression Atlas experiment page frontend e.g. https://www.ebi.ac.uk/gxa/experiments/E-MTAB-513",
   "main": "lib/index.js",
   "scripts": {
     "prepare": "rm -rf lib && babel src -d lib  --ignore '**/*.less' --copy-files",
-    "demo": "webpack-dev-server"
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server"
   },
   "author": "Expression Atlas developers <arrayexpress-atlas@ebi.ac.uk>",
   "collaborators": [

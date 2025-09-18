@@ -16,7 +16,9 @@ class Checkbox extends React.Component {
             id={`menu-item-${this.props.value}`}
             onChange={this.toggleCheckbox}
           />
-          <label>Most specific</label>
+          <label>
+            {this.props.isDifferential ? `Most specific` : `Marker genes`}
+          </label>
         </div>
       )
     }
@@ -24,8 +26,9 @@ class Checkbox extends React.Component {
 
 Checkbox.propTypes = {
   value: PropTypes.bool.isRequired,
-  onChangeValue: PropTypes.func.isRequired,
-  isVisible: PropTypes.string.isRequired
+  isVisible: PropTypes.string.isRequired,
+  isDifferential: PropTypes.bool.isRequired,
+  onChangeValue: PropTypes.func.isRequired
 }
 
 export default Checkbox
