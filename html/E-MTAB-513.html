@@ -1,30 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head lang="en">
     <meta charset="UTF-8">
 
     <title>Experiment page demo</title>
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/libraries/foundation-6/css/foundation.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.1/css/ebi-global.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.1/fonts.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/theme-atlas.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css"
+          type="text/css" media="all"/>
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css"
+          type="text/css" media="all"/>
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/customized-bootstrap-3.3.5.css">
-
-    <script src="/gxa/resources/js-bundles/vendorCommons.bundle.js"></script>
-    <script src="/gxa/resources/js-bundles/experimentPage.bundle.js"></script>
-
 </head>
 <body>
-    <div id="experiment-page"></div>
+<div id="experiment-page"></div>
 </body>
 
+<script src="../dist/vendors.bundle.js"></script>
+<script src="../dist/experimentPage.bundle.js"></script>
+
 <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
     experimentPage.render({
-        atlasUrl: 'http://www-test.ebi.ac.uk/gxa/',
-        content:{"experimentAccession":"E-MTAB-513","experimentType":"RNASEQ_MRNA_BASELINE","species":"homo sapiens","tabs":[{"type":"heatmap","name":"Heatmap","props":{"groups":[{"name":"ORGANISM_PART","primary":true,"selected":"all","groupings":[["leukocyte",["g1"]],["lymph node",["g2"]],["ovary",["g3"]],["breast",["g4"]],["kidney",["g5"]],["liver",["g6"]],["skeletal muscle",["g7"]],["heart",["g8"]],["brain",["g9"]],["prostate",["g10"]],["lung",["g11"]],["thyroid",["g12"]],["colon",["g13"]],["testis",["g14"]],["adipose",["g15"]],["adrenal",["g16"]]]},{"name":"AGE","primary":false,"selected":"all","groupings":[["58 year",["g1"]],["86 year",["g2"]],["47 year",["g3"]],["29 year",["g4"]],["60 year",["g5","g12","g16"]],["37 year",["g6"]],["77 year",["g7","g8","g9"]],["73 year",["g10","g15"]],["65 year",["g11"]],["68 year",["g13"]],["19 year",["g14"]]]},{"name":"ETHNIC_GROUP","primary":false,"selected":"all","groupings":[["Caucasian",["g1","g2","g4","g5","g6","g7","g8","g9","g10","g11","g12","g13","g14","g15","g16"]],["African American",["g3"]]]},{"name":"ORGANISM","primary":false,"selected":"all","groupings":[["Homo sapiens",["g1","g2","g3","g4","g5","g6","g7","g8","g9","g10","g11","g12","g13","g14","g15","g16"]]]},{"name":"SEX","primary":false,"selected":"all","groupings":[["male",["g1","g6","g7","g8","g10","g11","g14","g16"]],["female",["g2","g3","g4","g5","g9","g12","g13","g15"]]]}],"genesDistributedByCutoffUrl":"http://www-test.ebi.ac.uk/gxa/json/experiments/E-MTAB-513/genedistribution"}},{"type":"experiment-design","name":"Experiment Design","props":{"table":{"headers":[{"name":"","values":["Run"]},{"name":"Sample Characteristics","values":["age","ethnic group","organism","organism part","sex"]},{"name":"Experimental Variables","values":["organism part"]}],"data":[{"properties":{"analysed":false},"values":[["ERR030856"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030857"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030858"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030859"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030860"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030861"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030862"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030863"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030864"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030865"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030866"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030867"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030868"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030869"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030870"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":false},"values":[["ERR030871"],["","","Homo sapiens","16 tissues mixture",""],["16 tissues mixture"]]},{"properties":{"analysed":true},"values":[["ERR030872"],["60 year","Caucasian","Homo sapiens","thyroid","female"],["thyroid"]]},{"properties":{"analysed":true},"values":[["ERR030873"],["19 year","Caucasian","Homo sapiens","testis","male"],["testis"]]},{"properties":{"analysed":true},"values":[["ERR030874"],["47 year","African American","Homo sapiens","ovary","female"],["ovary"]]},{"properties":{"analysed":true},"values":[["ERR030875"],["58 year","Caucasian","Homo sapiens","leukocyte","male"],["leukocyte"]]},{"properties":{"analysed":true},"values":[["ERR030876"],["77 year","Caucasian","Homo sapiens","skeletal muscle","male"],["skeletal muscle"]]},{"properties":{"analysed":true},"values":[["ERR030877"],["73 year","Caucasian","Homo sapiens","prostate","male"],["prostate"]]},{"properties":{"analysed":true},"values":[["ERR030878"],["86 year","Caucasian","Homo sapiens","lymph node","female"],["lymph node"]]},{"properties":{"analysed":true},"values":[["ERR030879"],["65 year","Caucasian","Homo sapiens","lung","male"],["lung"]]},{"properties":{"analysed":true},"values":[["ERR030880"],["73 year","Caucasian","Homo sapiens","adipose","female"],["adipose"]]},{"properties":{"analysed":true},"values":[["ERR030881"],["60 year","Caucasian","Homo sapiens","adrenal","male"],["adrenal"]]},{"properties":{"analysed":true},"values":[["ERR030882"],["77 year","Caucasian","Homo sapiens","brain","female"],["brain"]]},{"properties":{"analysed":true},"values":[["ERR030883"],["29 year","Caucasian","Homo sapiens","breast","female"],["breast"]]},{"properties":{"analysed":true},"values":[["ERR030884"],["68 year","Caucasian","Homo sapiens","colon","female"],["colon"]]},{"properties":{"analysed":true},"values":[["ERR030885"],["60 year","Caucasian","Homo sapiens","kidney","female"],["kidney"]]},{"properties":{"analysed":true},"values":[["ERR030886"],["77 year","Caucasian","Homo sapiens","heart","male"],["heart"]]},{"properties":{"analysed":true},"values":[["ERR030887"],["37 year","Caucasian","Homo sapiens","liver","male"],["liver"]]},{"properties":{"analysed":false},"values":[["ERR030888"],["73 year","Caucasian","Homo sapiens","adipose","female"],["adipose"]]},{"properties":{"analysed":false},"values":[["ERR030889"],["60 year","Caucasian","Homo sapiens","adrenal","male"],["adrenal"]]},{"properties":{"analysed":false},"values":[["ERR030890"],["77 year","Caucasian","Homo sapiens","brain","female"],["brain"]]},{"properties":{"analysed":false},"values":[["ERR030891"],["29 year","Caucasian","Homo sapiens","breast","female"],["breast"]]},{"properties":{"analysed":false},"values":[["ERR030892"],["68 year","Caucasian","Homo sapiens","colon","female"],["colon"]]},{"properties":{"analysed":false},"values":[["ERR030893"],["60 year","Caucasian","Homo sapiens","kidney","female"],["kidney"]]},{"properties":{"analysed":false},"values":[["ERR030894"],["77 year","Caucasian","Homo sapiens","heart","male"],["heart"]]},{"properties":{"analysed":false},"values":[["ERR030895"],["37 year","Caucasian","Homo sapiens","liver","male"],["liver"]]},{"properties":{"analysed":false},"values":[["ERR030896"],["65 year","Caucasian","Homo sapiens","lung","male"],["lung"]]},{"properties":{"analysed":false},"values":[["ERR030897"],["86 year","Caucasian","Homo sapiens","lymph node","female"],["lymph node"]]},{"properties":{"analysed":false},"values":[["ERR030898"],["73 year","Caucasian","Homo sapiens","prostate","male"],["prostate"]]},{"properties":{"analysed":false},"values":[["ERR030899"],["77 year","Caucasian","Homo sapiens","skeletal muscle","male"],["skeletal muscle"]]},{"properties":{"analysed":false},"values":[["ERR030900"],["58 year","Caucasian","Homo sapiens","leukocyte","male"],["leukocyte"]]},{"properties":{"analysed":false},"values":[["ERR030901"],["47 year","African American","Homo sapiens","ovary","female"],["ovary"]]},{"properties":{"analysed":false},"values":[["ERR030902"],["19 year","Caucasian","Homo sapiens","testis","male"],["testis"]]},{"properties":{"analysed":false},"values":[["ERR030903"],["60 year","Caucasian","Homo sapiens","thyroid","female"],["thyroid"]]}]},"downloadUrl":"http://www-test.ebi.ac.uk/gxa/experiments/E-MTAB-513/resources/experiment-design"}},{"type":"static-table","name":"Analysis Methods","props":{"data":[["Pipeline version","\u003ca href\u003d\"http://nunofonseca.github.io/irap/\"\u003eiRAP\u003c/a\u003e 0.4.3d3 "],["Analyzed Libraries","\u003ca href\u003d\"experiments/E-MTAB-513/experiment-design\"\u003ePaired-end only\u003c/a\u003e"],["Filtering Step 1","Discard reads below minimum quality threshold"],["Filtering Step 2","Check of bacterial contamination; discard offending reads"],["Filtering Step 3","Discard reads with common uncalled characters (e.g. N)"],["Filtering Step 4","Remove reads from pair-end libraries that were orphaned by filtering steps 1-3"],["Read Mapping ","Against genome reference (Ensembl release: 79) tophat2 version: 2.0.10"],["Quantification","htseq2 version: 0.6.1p1"],["Normalized Counts per Gene","(FPKMs) are calculated from the raw counts by \u003ca href\u003d\"http://nunofonseca.github.io/irap/\"\u003eiRAP\u003c/a\u003e. These are averaged for each set of technical replicates, and then quantile normalized within each set of biological replicates using \u003ca href\u003d\"http://www.bioconductor.org/packages/release/bioc/html/limma.html\"\u003elimma\u003c/a\u003e. Finally, they are averaged for all biological replicates (if any)"]]}},{"type":"resources","name":"Resources","props":{"url":"http://www-test.ebi.ac.uk/gxa/json/experiments/E-MTAB-513/resources"}}]},
-        target: "experiment-page"
-    });
+      atlasUrl: 'https://www.ebi.ac.uk/gxa/',
+      content: {
+        "experimentAccession": "E-MTAB-513",
+        "experimentType": "RNASEQ_MRNA_BASELINE",
+        "accessKey": "",
+        "species": "homo sapiens",
+        "disclaimer": "",
+        "tabs": [{
+          "type": "heatmap", "name": "Results", "props": {
+            "groups": [{
+              "name": "ORGANISM_PART",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["leukocyte", ["g1"]], ["lymph node", ["g2"]], ["ovary", ["g3"]], ["breast", ["g4"]], ["kidney", ["g5"]], ["liver", ["g6"]], ["skeletal muscle", ["g7"]], ["heart", ["g8"]], ["brain", ["g9"]], ["prostate", ["g10"]], ["lung", ["g11"]], ["thyroid", ["g12"]], ["colon", ["g13"]], ["testis", ["g14"]], ["adipose", ["g15"]], ["adrenal", ["g16"]]]
+            }, {
+              "name": "ORGANISM",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["Homo sapiens", ["g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8", "g9", "g10", "g11", "g12", "g13", "g14", "g15", "g16"]]]
+            }, {
+              "name": "AGE",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["58 year", ["g1"]], ["86 year", ["g2"]], ["47 year", ["g3"]], ["29 year", ["g4"]], ["60 year", ["g5", "g12", "g16"]], ["37 year", ["g6"]], ["77 year", ["g7", "g8", "g9"]], ["73 year", ["g10", "g15"]], ["65 year", ["g11"]], ["68 year", ["g13"]], ["19 year", ["g14"]]]
+            }, {
+              "name": "SEX",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["male", ["g1", "g6", "g7", "g8", "g10", "g11", "g14", "g16"]], ["female", ["g2", "g3", "g4", "g5", "g9", "g12", "g13", "g15"]]]
+            }, {
+              "name": "ETHNIC_GROUP",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["Caucasian", ["g1", "g2", "g4", "g5", "g6", "g7", "g8", "g9", "g10", "g11", "g12", "g13", "g14", "g15", "g16"]], ["African American", ["g3"]]]
+            }],
+            "genesDistributedByCutoffUrl": "json/experiments/E-MTAB-513/genedistribution?experimentType\u003dRNASEQ_MRNA_BASELINE",
+            "availableDataUnits": ["TPM", "FPKM"]
+          }
+        }, {
+          "type": "experiment-design", "name": "Experiment Design", "props": {
+            "table": {
+              "headers": [{"name": "", "values": ["Run"]}, {
+                "name": "Sample Characteristics",
+                "values": ["organism", "age", "organism part", "sex", "ethnic group"]
+              }, {"name": "Experimental Variables", "values": ["organism part"]}],
+              "data": [{
+                "properties": {"analysed": false},
+                "values": [["ERR030856"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030857"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030858"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030859"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030860"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030861"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030862"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030863"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030864"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030865"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030866"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030867"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030868"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030869"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030870"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030871"], ["Homo sapiens", "", "16 tissues mixture", "", ""], ["16 tissues mixture"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030872"], ["Homo sapiens", "60 year", "thyroid", "female", "Caucasian"], ["thyroid"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030873"], ["Homo sapiens", "19 year", "testis", "male", "Caucasian"], ["testis"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030874"], ["Homo sapiens", "47 year", "ovary", "female", "African American"], ["ovary"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030875"], ["Homo sapiens", "58 year", "leukocyte", "male", "Caucasian"], ["leukocyte"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030876"], ["Homo sapiens", "77 year", "skeletal muscle", "male", "Caucasian"], ["skeletal muscle"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030877"], ["Homo sapiens", "73 year", "prostate", "male", "Caucasian"], ["prostate"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030878"], ["Homo sapiens", "86 year", "lymph node", "female", "Caucasian"], ["lymph node"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030879"], ["Homo sapiens", "65 year", "lung", "male", "Caucasian"], ["lung"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030880"], ["Homo sapiens", "73 year", "adipose", "female", "Caucasian"], ["adipose"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030881"], ["Homo sapiens", "60 year", "adrenal", "male", "Caucasian"], ["adrenal"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030882"], ["Homo sapiens", "77 year", "brain", "female", "Caucasian"], ["brain"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030883"], ["Homo sapiens", "29 year", "breast", "female", "Caucasian"], ["breast"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030884"], ["Homo sapiens", "68 year", "colon", "female", "Caucasian"], ["colon"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030885"], ["Homo sapiens", "60 year", "kidney", "female", "Caucasian"], ["kidney"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030886"], ["Homo sapiens", "77 year", "heart", "male", "Caucasian"], ["heart"]]
+              }, {
+                "properties": {"analysed": true},
+                "values": [["ERR030887"], ["Homo sapiens", "37 year", "liver", "male", "Caucasian"], ["liver"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030888"], ["Homo sapiens", "73 year", "adipose", "female", "Caucasian"], ["adipose"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030889"], ["Homo sapiens", "60 year", "adrenal", "male", "Caucasian"], ["adrenal"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030890"], ["Homo sapiens", "77 year", "brain", "female", "Caucasian"], ["brain"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030891"], ["Homo sapiens", "29 year", "breast", "female", "Caucasian"], ["breast"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030892"], ["Homo sapiens", "68 year", "colon", "female", "Caucasian"], ["colon"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030893"], ["Homo sapiens", "60 year", "kidney", "female", "Caucasian"], ["kidney"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030894"], ["Homo sapiens", "77 year", "heart", "male", "Caucasian"], ["heart"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030895"], ["Homo sapiens", "37 year", "liver", "male", "Caucasian"], ["liver"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030896"], ["Homo sapiens", "65 year", "lung", "male", "Caucasian"], ["lung"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030897"], ["Homo sapiens", "86 year", "lymph node", "female", "Caucasian"], ["lymph node"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030898"], ["Homo sapiens", "73 year", "prostate", "male", "Caucasian"], ["prostate"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030899"], ["Homo sapiens", "77 year", "skeletal muscle", "male", "Caucasian"], ["skeletal muscle"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030900"], ["Homo sapiens", "58 year", "leukocyte", "male", "Caucasian"], ["leukocyte"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030901"], ["Homo sapiens", "47 year", "ovary", "female", "African American"], ["ovary"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030902"], ["Homo sapiens", "19 year", "testis", "male", "Caucasian"], ["testis"]]
+              }, {
+                "properties": {"analysed": false},
+                "values": [["ERR030903"], ["Homo sapiens", "60 year", "thyroid", "female", "Caucasian"], ["thyroid"]]
+              }]
+            }, "downloadUrl": "experiments-content/E-MTAB-513/resources/experiment-design"
+          }
+        }, {
+          "type": "multipart", "name": "Supplementary Information", "props": {
+            "sections": [{
+              "type": "static-table", "name": "Analysis Methods", "props": {
+                "data": [["Pipeline version", "\u003ca href\u003d\"http://nunofonseca.github.io/irap/\"\u003eiRAP\u003c/a\u003e 1.0.1 "], ["Analyzed Libraries", "See \u003ca href\u003d\"Experiment Design\"\u003eexperiment design\u003c/a\u003e"], ["Filtering Step 1", "Discard reads below minimum quality threshold"], ["Filtering Step 2", "Check of bacterial contamination; discard offending reads"], ["Filtering Step 3", "Discard reads with common uncalled characters (e.g. N)"], ["Filtering Step 4", "Remove reads from pair-end libraries that were orphaned by filtering steps 1-3"], ["Read Mapping ", "Against genome reference (Ensembl release: 95) HISAT2 version: 2.1.0"], ["Gene Quantification", "FeatureCounts version: 1.6.2"], ["Transcript Quantification", "kallisto version: 0.42.4"], ["Normalized Counts per Gene", "(TPMs/FPKMs) are calculated from the raw counts by \u003ca href\u003d\"http://nunofonseca.github.io/irap/\"\u003eiRAP\u003c/a\u003e. These are averaged for each set of technical replicates, and then quantile normalized within each set of biological replicates using \u003ca href\u003d\"http://www.bioconductor.org/packages/release/bioc/html/limma.html\"\u003elimma\u003c/a\u003e. Finally, they are averaged for all biological replicates (if any)"]]
+              }
+            }, {
+              "type": "resources",
+              "name": "Resources",
+              "props": {"url": "json/experiments/E-MTAB-513/resources/SUPPLEMENTARY_INFORMATION"}
+            }]
+          }
+        }, {"type": "resources", "name": "Downloads", "props": {"url": "json/experiments/E-MTAB-513/resources/DATA"}}]
+      },
+      target: 'experiment-page'
+    })
+    feedbackForm.render({
+      feedbackFormLink: 'https://www.ebi.ac.uk/support/gxa',
+      gaId: 'UA-37676851-1'
+    }, 'feedback-button')
+  })
 </script>
 
 </html>
