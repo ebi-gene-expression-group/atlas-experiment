@@ -6,6 +6,7 @@ import {uniq} from 'lodash'
 import URI from 'urijs'
 import Disclaimers from '@ebi-gene-expression-group/expression-atlas-disclaimers'
 import {Button} from 'react-bootstrap/lib'
+import {ArchiveResources} from "./ArchiveResources"
 
 const ResourcesSection = ({values, pathToResources, atlasUrl}) => {
   const subsections = uniq(values.map((value)=> (
@@ -102,6 +103,10 @@ class ResourcesTab extends Component {
         </div>
       )
     } else if (resourcesFetch.fulfilled) {
+      const resources = resourcesFetch.value;
+      const archiveResources = resources.filter(value => value.isExternalResource );
+      const metadataResources = resources.filter(value => !value.isExternalResource );
+
       return (
         resourcesFetch.value.length >= 1 &&
         <DisclaimerWrapper disclaimer={disclaimer}>
@@ -114,9 +119,10 @@ class ResourcesTab extends Component {
           <div className={`small-12 columns margin-bottom-xlarge`}>
             <h3 key={`title`}>Metadata/Result files</h3>
             <ResourcesSection
-              values={resourcesFetch.value}
+              values={metadataResources}
               {...{pathToResources, atlasUrl}} />
           </div>
+          <ArchiveResources archiveResources={archiveResources} {...{pathToResources}} />
         </DisclaimerWrapper>
       )
     }
