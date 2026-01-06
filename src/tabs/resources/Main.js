@@ -7,6 +7,7 @@ import URI from 'urijs'
 import Disclaimers from '@ebi-gene-expression-group/expression-atlas-disclaimers'
 import {Button} from 'react-bootstrap/lib'
 import {ArchiveResources} from "./ArchiveResources"
+import {DisplayIf} from "./DisplayIf"
 
 const ResourcesSection = ({values, pathToResources, atlasUrl}) => {
   const subsections = uniq(values.map((value)=> (
@@ -17,7 +18,7 @@ const ResourcesSection = ({values, pathToResources, atlasUrl}) => {
     <ul style={{listStyle: `none`, marginLeft: `0rem`}}>
       {
         subsections.filter(el=>el).length < 2
-          ? values.map((value, ix, self) => (
+          ? values.map((value, ix) => (
             <li key={ix}>
               <a href={URI(value.url, atlasUrl)}>
                 <p>
@@ -35,7 +36,7 @@ const ResourcesSection = ({values, pathToResources, atlasUrl}) => {
                   values.filter((value) => (
                     subsectionName === value.group
                   ))
-                    .map((value, jx, self) => (
+                    .map((value, jx) => (
                       <li key={jx} className="margin-left-large">
                         <a href={URI(value.url, atlasUrl)}>
                           <div>
@@ -89,11 +90,11 @@ DisclaimerWrapper.propTypes = {
 
 class ResourcesTab extends Component {
   render() {
-    const {resourcesFetch, atlasUrl, pathToResources, disclaimer, experimentAccession} = this.props
+    const {resourcesFetch, atlasUrl, pathToResources, disclaimer, experimentAccession, url} = this.props
     if (resourcesFetch.pending) {
       return (
         <div className={`row column expanded margin-top-large`}>
-          <img src={URI(`resources/images/loading.gif`, atlasUrl)} />
+          <img src={URI(`resources/images/loading.gif`, atlasUrl)} alt={'Loading...'} />
         </div>
       )
     } else if (resourcesFetch.rejected) {
@@ -107,22 +108,28 @@ class ResourcesTab extends Component {
       const archiveResources = resources.filter(value => value.isExternalResource );
       const metadataResources = resources.filter(value => !value.isExternalResource );
 
+      const tabName = url.split('/').pop();
+
       return (
         resourcesFetch.value.length >= 1 &&
         <DisclaimerWrapper disclaimer={disclaimer}>
-          <div className={`small-12 columns margin-bottom-xlarge`}>
-            <h3 key={`title`}>Via FTP</h3>
-            <span>You can download data for this experiment in Expression Atlas through our <a
-              href={`https://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/experiments/${experimentAccession}`}>{`FTP site`}</a>.
-            </span>
-          </div>
+          <DisplayIf condition={tabName === `DATA`}>
+            <div className={`small-12 columns margin-bottom-xlarge`}>
+              <h3 key={`title`}>Via FTP</h3>
+              <span>You can download data for this experiment in Expression Atlas through our <a
+                href={`https://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/experiments/${experimentAccession}`}>{`FTP site`}</a>.
+              </span>
+            </div>
+          </DisplayIf>
           <div className={`small-12 columns margin-bottom-xlarge`}>
             <h3 key={`title`}>Metadata/Result files</h3>
             <ResourcesSection
               values={metadataResources}
               {...{pathToResources, atlasUrl}} />
           </div>
-          <ArchiveResources archiveResources={archiveResources} {...{pathToResources}} />
+          <DisplayIf condition={tabName === `DATA`}>
+            <ArchiveResources archiveResources={archiveResources} {...{pathToResources}} />
+          </DisplayIf>
         </DisclaimerWrapper>
       )
     }
