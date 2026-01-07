@@ -109,25 +109,24 @@ class ResourcesTab extends Component {
       const metadataResources = resources.filter(value => !value.isExternalResource );
 
       const tabName = url.split('/').pop();
+      const downloadTabName = `DATA`
 
       return (
         resourcesFetch.value.length >= 1 &&
         <DisclaimerWrapper disclaimer={disclaimer}>
-          <DisplayIf condition={tabName === `DATA`}>
-            <div className={`small-12 columns margin-bottom-xlarge`}>
-              <h3 key={`title`}>Via FTP</h3>
-              <span>You can download data for this experiment in Expression Atlas through our <a
-                href={`https://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/experiments/${experimentAccession}`}>{`FTP site`}</a>.
-              </span>
-            </div>
-          </DisplayIf>
           <div className={`small-12 columns margin-bottom-xlarge`}>
             <h3 key={`title`}>Metadata/Result files</h3>
             <ResourcesSection
               values={metadataResources}
               {...{pathToResources, atlasUrl}} />
           </div>
-          <DisplayIf condition={tabName === `DATA`}>
+          <DisplayIf condition={tabName === downloadTabName}>
+            <div className={`small-12 columns margin-bottom-xlarge`}>
+              <h3 key={`title`}>Via FTP</h3>
+              <span>You can download data for this experiment in Expression Atlas through our <a
+                href={`https://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/experiments/${experimentAccession}`}>{`FTP site`}</a>.
+              </span>
+            </div>
             <ArchiveResources archiveResources={archiveResources} {...{pathToResources}} />
           </DisplayIf>
         </DisclaimerWrapper>
