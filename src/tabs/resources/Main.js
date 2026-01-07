@@ -115,15 +115,16 @@ class ResourcesTab extends Component {
         resourcesFetch.value.length >= 1 &&
         <DisclaimerWrapper disclaimer={disclaimer}>
           <div className={`small-12 columns margin-bottom-xlarge`}>
-            <h3 key={`title`}>Metadata/Result files</h3>
+            <h3 key={`title`}>Curated Analysis Files</h3>
+            <p>Processed expression data, experimental design, and R-ready results:</p>
             <ResourcesSection
               values={metadataResources}
               {...{pathToResources, atlasUrl}} />
           </div>
           <DisplayIf condition={tabName === downloadTabName}>
             <div className={`small-12 columns margin-bottom-xlarge`}>
-              <h3 key={`title`}>Via FTP</h3>
-              <span>You can download data for this experiment in Expression Atlas through our <a
+              <h3 key={`title`}>Full Experiment Archive (FTP)</h3>
+              <span>Access intermediate analysis files and bulk outputs on our <a
                 href={`https://ftp.ebi.ac.uk/pub/databases/microarray/data/atlas/experiments/${experimentAccession}`}>{`FTP site`}</a>.
               </span>
             </div>
