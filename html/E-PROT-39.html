@@ -1,10 +1,12 @@
-<html>
+<html lang="en">
 <head lang="en">
     <meta charset="UTF-8">
 
     <title>Experiment page demo</title>
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css"
+          type="text/css" media="all"/>
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css"
+          type="text/css" media="all"/>
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/customized-bootstrap-3.3.5.css">
 </head>
 <body>
@@ -14,12 +16,166 @@
 <script src="../dist/vendors.bundle.js"></script>
 <script src="../dist/experimentPage.bundle.js"></script>
 
-<script type="text/javascript">
-  experimentPage.render({
-    atlasUrl: 'http://localhost:8080/gxa/',
-    content:{"experimentAccession":"E-PROT-1","experimentType":"PROTEOMICS_BASELINE","accessKey":"","species":"homo sapiens","disclaimer":"","tabs":[{"type":"heatmap","name":"Results","props":{"groups":[{"name":"ORGANISM_PART","primary":true,"selected":"all","groupings":[["adrenal gland",["g1"]],["B cell",["g2"]],["CD4-positive T cell",["g3"]],["CD8-positive T cell",["g4"]],["colon",["g5"]],["esophagus",["g6"]],["frontal cortex",["g7"]],["gall bladder",["g8"]],["heart",["g9","g26"]],["kidney",["g10"]],["liver",["g11","g27"]],["lung",["g12"]],["monocyte",["g13"]],["natural killer cell",["g14"]],["ovary",["g15","g28"]],["pancreas",["g16"]],["platelet",["g17"]],["prostate gland",["g18"]],["rectum",["g19"]],["retina",["g20"]],["spinal cord",["g21"]],["testis",["g22","g30"]],["urinary bladder",["g23"]],["brain",["g24"]],["gut",["g25"]],["placenta",["g29"]]]},{"name":"DEVELOPMENTAL_STAGE","primary":true,"selected":["adult"],"groupings":[["adult",["g1","g2","g3","g4","g5","g6","g7","g8","g9","g10","g11","g12","g13","g14","g15","g16","g17","g18","g19","g20","g21","g22","g23"]],["fetus",["g24","g25","g26","g27","g28","g29","g30"]]]},{"name":"ORGANISM","primary":false,"selected":"all","groupings":[["Homo sapiens",["g1","g2","g3","g4","g5","g6","g7","g8","g9","g10","g11","g12","g13","g14","g15","g16","g17","g18","g19","g20","g21","g22","g23","g24","g25","g26","g27","g28","g29","g30"]]]}],"genesDistributedByCutoffUrl":"json/experiments/E-PROT-1/genedistribution?experimentType\u003dPROTEOMICS_BASELINE","availableDataUnits":[]}},{"type":"experiment-design","name":"Experiment Design","props":{"table":{"headers":[{"name":"","values":["Run"]},{"name":"Sample Characteristics","values":["organism","developmental stage","organism part"]},{"name":"Experimental Variables","values":["developmental stage","organism part"]}],"data":[{"properties":{"analysed":true},"values":[["Adult_Adrenalgland"],["Homo sapiens","adult","adrenal gland"],["adult","adrenal gland"]]},{"properties":{"analysed":true},"values":[["Adult_Bcells"],["Homo sapiens","adult","B cell"],["adult","B cell"]]},{"properties":{"analysed":true},"values":[["Adult_CD4Tcells"],["Homo sapiens","adult","CD4-positive T cell"],["adult","CD4-positive T cell"]]},{"properties":{"analysed":true},"values":[["Adult_CD8Tcells"],["Homo sapiens","adult","CD8-positive T cell"],["adult","CD8-positive T cell"]]},{"properties":{"analysed":true},"values":[["Adult_Colon"],["Homo sapiens","adult","colon"],["adult","colon"]]},{"properties":{"analysed":true},"values":[["Adult_Esophagus"],["Homo sapiens","adult","esophagus"],["adult","esophagus"]]},{"properties":{"analysed":true},"values":[["Adult_Frontalcortex"],["Homo sapiens","adult","frontal cortex"],["adult","frontal cortex"]]},{"properties":{"analysed":true},"values":[["Adult_Gallbladder"],["Homo sapiens","adult","gall bladder"],["adult","gall bladder"]]},{"properties":{"analysed":true},"values":[["Adult_Heart"],["Homo sapiens","adult","heart"],["adult","heart"]]},{"properties":{"analysed":true},"values":[["Adult_Kidney"],["Homo sapiens","adult","kidney"],["adult","kidney"]]},{"properties":{"analysed":true},"values":[["Adult_Liver"],["Homo sapiens","adult","liver"],["adult","liver"]]},{"properties":{"analysed":true},"values":[["Adult_Lung"],["Homo sapiens","adult","lung"],["adult","lung"]]},{"properties":{"analysed":true},"values":[["Adult_Monocytes"],["Homo sapiens","adult","monocyte"],["adult","monocyte"]]},{"properties":{"analysed":true},"values":[["Adult_NKcells"],["Homo sapiens","adult","natural killer cell"],["adult","natural killer cell"]]},{"properties":{"analysed":true},"values":[["Adult_Ovary"],["Homo sapiens","adult","ovary"],["adult","ovary"]]},{"properties":{"analysed":true},"values":[["Adult_Pancreas"],["Homo sapiens","adult","pancreas"],["adult","pancreas"]]},{"properties":{"analysed":true},"values":[["Adult_Platelets"],["Homo sapiens","adult","platelet"],["adult","platelet"]]},{"properties":{"analysed":true},"values":[["Adult_Prostate"],["Homo sapiens","adult","prostate gland"],["adult","prostate gland"]]},{"properties":{"analysed":true},"values":[["Adult_Rectum"],["Homo sapiens","adult","rectum"],["adult","rectum"]]},{"properties":{"analysed":true},"values":[["Adult_Retina"],["Homo sapiens","adult","retina"],["adult","retina"]]},{"properties":{"analysed":true},"values":[["Adult_Spinalcord"],["Homo sapiens","adult","spinal cord"],["adult","spinal cord"]]},{"properties":{"analysed":true},"values":[["Adult_Testis"],["Homo sapiens","adult","testis"],["adult","testis"]]},{"properties":{"analysed":true},"values":[["Adult_Urinarybladder"],["Homo sapiens","adult","urinary bladder"],["adult","urinary bladder"]]},{"properties":{"analysed":true},"values":[["Fetal_Brain"],["Homo sapiens","fetus","brain"],["fetus","brain"]]},{"properties":{"analysed":true},"values":[["Fetal_Gut"],["Homo sapiens","fetus","gut"],["fetus","gut"]]},{"properties":{"analysed":true},"values":[["Fetal_Heart"],["Homo sapiens","fetus","heart"],["fetus","heart"]]},{"properties":{"analysed":true},"values":[["Fetal_Liver"],["Homo sapiens","fetus","liver"],["fetus","liver"]]},{"properties":{"analysed":true},"values":[["Fetal_Ovary"],["Homo sapiens","fetus","ovary"],["fetus","ovary"]]},{"properties":{"analysed":true},"values":[["Fetal_Placenta"],["Homo sapiens","fetus","placenta"],["fetus","placenta"]]},{"properties":{"analysed":true},"values":[["Fetal_Testis"],["Homo sapiens","fetus","testis"],["fetus","testis"]]}]},"downloadUrl":"experiments-content/E-PROT-1/resources/experiment-design"}},{"type":"multipart","name":"Supplementary Information","props":{"sections":[{"type":"static-table","name":"Analysis Methods","props":{"data":[["Pipeline ","Please see \u003ca href\u003d\"https://www.ebi.ac.uk/gxa/experiments/E-PROT-1/analysis-methods/HumanDataAnalysisFigure.pdf\"\u003eWorkflow\u003c/a\u003e and \u003ca href\u003d\"https://www.ebi.ac.uk/gxa/experiments/E-PROT-1/analysis-methods/HumanDataAnalysisMethods.pdf\"\u003eMethods\u003c/a\u003e for more information."],["Protein to Gene Mapping","   Ensembl 76/GENCODE 20 (GRCh38)"]]}},{"type":"resources","name":"Resources","props":{"url":"http://www-test.ebi.ac.uk/gxa/json/experiments/E-PROT-1/resources/SUPPLEMENTARY_INFORMATION"}}]}},{"type":"resources","name":"Downloads","props":{"url":"http://www-test.ebi.ac.uk/gxa/json/experiments/E-PROT-1/resources/DATA"}}]},
-    target: "experiment-page"
-  });
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    experimentPage.render({
+      atlasUrl: 'http://localhost:8080/gxa/',
+      content: {
+        "experimentAccession": "E-PROT-39",
+        "experimentType": "RNASEQ_MRNA_DIFFERENTIAL",
+        "accessKey": "",
+        "species": "homo sapiens",
+        "disclaimer": "",
+        "tabs": [{
+          "type": "heatmap", "name": "Results", "props": {
+            "groups": [{
+              "name": "COMPARISON_NAME",
+              "primary": true,
+              "selected": "all",
+              "groupings": [["\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027octogenarian age bracket\u0027", ["g2_g1"]], ["\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027sexagenarian age bracket\u0027", ["g4_g3"]]]
+            }, {
+              "name": "DISEASE",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["normal", ["g2_g1", "g4_g3"]], ["Alzheimer\u0027s disease", ["g2_g1", "g4_g3"]]]
+            }, {
+              "name": "CLINICAL_INFORMATION",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["octogenarian age bracket", ["g2_g1"]], ["sexagenarian age bracket", ["g4_g3"]]]
+            }, {
+              "name": "ORGANISM",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["Homo sapiens", ["g2_g1", "g4_g3"]]]
+            }, {
+              "name": "INDIVIDUAL",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["3", ["g2_g1"]], ["4", ["g2_g1"]], ["1", ["g4_g3"]], ["2", ["g4_g3"]]]
+            }, {
+              "name": "AGE",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["84 year", ["g2_g1"]], ["83 year", ["g2_g1"]], ["67 year", ["g4_g3"]], ["68 year", ["g4_g3"]]]
+            }, {
+              "name": "DEVELOPMENTAL_STAGE",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["adult", ["g2_g1", "g4_g3"]]]
+            }, {
+              "name": "SEX",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["female", ["g2_g1", "g4_g3"]]]
+            }, {
+              "name": "ORGANISM_PART",
+              "primary": false,
+              "selected": "all",
+              "groupings": [["middle frontal gyrus", ["g2_g1", "g4_g3"]]]
+            }],
+            "genesDistributedByCutoffUrl": "json/experiments/E-PROT-39/genedistribution?experimentType\u003dRNASEQ_MRNA_DIFFERENTIAL",
+            "availableDataUnits": []
+          }
+        }, {"type": "resources", "name": "Plots", "props": {"url": "json/experiments/E-PROT-39/resources/PLOTS"}}, {
+          "type": "experiment-design", "name": "Experiment Design", "props": {
+            "table": {
+              "headers": [{"name": "", "values": ["Run"]}, {
+                "name": "Sample Characteristics",
+                "values": ["organism", "individual", "age", "developmental stage", "sex", "disease", "organism part"]
+              }, {"name": "Experimental Variables", "values": ["disease", "clinical information"]}],
+              "data": [{
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027sexagenarian age bracket\u0027",
+                  "referenceOrTest": "reference"
+                },
+                "values": [["1.AD_A"], ["Homo sapiens", "1", "67 year", "adult", "female", "normal", "middle frontal gyrus"], ["normal", "sexagenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027sexagenarian age bracket\u0027",
+                  "referenceOrTest": "reference"
+                },
+                "values": [["1.AD_B"], ["Homo sapiens", "1", "67 year", "adult", "female", "normal", "middle frontal gyrus"], ["normal", "sexagenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027sexagenarian age bracket\u0027",
+                  "referenceOrTest": "reference"
+                },
+                "values": [["1.AD_C"], ["Homo sapiens", "1", "67 year", "adult", "female", "normal", "middle frontal gyrus"], ["normal", "sexagenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027sexagenarian age bracket\u0027",
+                  "referenceOrTest": "test"
+                },
+                "values": [["2.AD_A"], ["Homo sapiens", "2", "68 year", "adult", "female", "Alzheimer\u0027s disease", "middle frontal gyrus"], ["Alzheimer\u0027s disease", "sexagenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027sexagenarian age bracket\u0027",
+                  "referenceOrTest": "test"
+                },
+                "values": [["2.AD_B"], ["Homo sapiens", "2", "68 year", "adult", "female", "Alzheimer\u0027s disease", "middle frontal gyrus"], ["Alzheimer\u0027s disease", "sexagenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027sexagenarian age bracket\u0027",
+                  "referenceOrTest": "test"
+                },
+                "values": [["2.AD_C"], ["Homo sapiens", "2", "68 year", "adult", "female", "Alzheimer\u0027s disease", "middle frontal gyrus"], ["Alzheimer\u0027s disease", "sexagenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027octogenarian age bracket\u0027",
+                  "referenceOrTest": "reference"
+                },
+                "values": [["3.AD_A"], ["Homo sapiens", "3", "84 year", "adult", "female", "normal", "middle frontal gyrus"], ["normal", "octogenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027octogenarian age bracket\u0027",
+                  "referenceOrTest": "reference"
+                },
+                "values": [["3.AD_B"], ["Homo sapiens", "3", "84 year", "adult", "female", "normal", "middle frontal gyrus"], ["normal", "octogenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027octogenarian age bracket\u0027",
+                  "referenceOrTest": "reference"
+                },
+                "values": [["3.AD_C"], ["Homo sapiens", "3", "84 year", "adult", "female", "normal", "middle frontal gyrus"], ["normal", "octogenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027octogenarian age bracket\u0027",
+                  "referenceOrTest": "test"
+                },
+                "values": [["4.AD_A"], ["Homo sapiens", "4", "83 year", "adult", "female", "Alzheimer\u0027s disease", "middle frontal gyrus"], ["Alzheimer\u0027s disease", "octogenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027octogenarian age bracket\u0027",
+                  "referenceOrTest": "test"
+                },
+                "values": [["4.AD_B"], ["Homo sapiens", "4", "83 year", "adult", "female", "Alzheimer\u0027s disease", "middle frontal gyrus"], ["Alzheimer\u0027s disease", "octogenarian age bracket"]]
+              }, {
+                "properties": {
+                  "contrastName": "\u0027Alzheimer\u0027s disease\u0027 vs \u0027normal\u0027 in \u0027octogenarian age bracket\u0027",
+                  "referenceOrTest": "test"
+                },
+                "values": [["4.AD_C"], ["Homo sapiens", "4", "83 year", "adult", "female", "Alzheimer\u0027s disease", "middle frontal gyrus"], ["Alzheimer\u0027s disease", "octogenarian age bracket"]]
+              }]
+            }, "downloadUrl": "experiments-content/E-PROT-39/resources/experiment-design"
+          }
+        }, {
+          "type": "multipart", "name": "Supplementary Information", "props": {
+            "sections": [{
+              "type": "static-table", "name": "Analysis Methods", "props": {
+                "data": [["Samples used in this study", "Data included in this study is based on the re-analysis of raw mass spectrometry data originally submitted to the PRIDE database."], ["Data processing protocol", "Raw mass spectrometry data was manually curated in order to map the raw files to the samples (see “Experimental Design” tab) and then processed using MaxQuant. The output (pre-processed) intensities were then normalised, proteins mapped to Ensembl gene IDs and filtered results (post-processed) were uploaded to Expression Atlas."], ["Post-processing analysis", "Protein groups with contaminants, reverse decoys and with no mappings or mapping to more than one Ensembl gene IDs were removed.  Protein groups with more than 50% sample replicates having zero corrected reporter intensities were removed. Protein abundance values were normalized per sample by “parts per billion”. Differential expression values were calculated using MSstatsTMT package."], ["Protein to Gene Mapping", "The R package ‘mygene’ (version 1.20.0) was used to map SwissProt accessions to Ensembl gene ID, gene symbol. The data resource used was Ensembl 99/Genome assembly: GRCh38 (Genome Reference Consortium Human Reference 38)."]]
+              }
+            }]
+          }
+        }, {"type": "resources", "name": "Downloads", "props": {"url": "json/experiments/E-PROT-39/resources/DATA"}}]
+      },
+      target: 'experiment-page'
+    })
+    feedbackForm.render({
+      feedbackFormLink: 'https://www.ebi.ac.uk/support/gxa',
+      gaId: 'UA-37676851-1'
+    }, 'feedback-button')
+  })
 </script>
 
 </html>

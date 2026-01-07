@@ -1,0 +1,1 @@
+export const DisplayIf = ({ condition, children }) => condition ? children : null;

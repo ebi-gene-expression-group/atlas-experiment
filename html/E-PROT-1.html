@@ -1,10 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head lang="en">
     <meta charset="UTF-8">
 
     <title>Experiment page demo</title>
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css"
+          type="text/css" media="all"/>
+    <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css"
+          type="text/css" media="all"/>
     <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/customized-bootstrap-3.3.5.css">
 </head>
 <body>
@@ -17,9 +20,161 @@
 <script type="text/javascript">
   experimentPage.render({
     atlasUrl: 'http://localhost:8080/gxa/',
-    content:{"experimentAccession":"E-PROT-1","experimentType":"PROTEOMICS_BASELINE","accessKey":"","species":"homo sapiens","disclaimer":"","tabs":[{"type":"heatmap","name":"Results","props":{"groups":[{"name":"ORGANISM_PART","primary":true,"selected":"all","groupings":[["adrenal gland",["g1"]],["B cell",["g2"]],["CD4-positive T cell",["g3"]],["CD8-positive T cell",["g4"]],["colon",["g5"]],["esophagus",["g6"]],["frontal cortex",["g7"]],["gall bladder",["g8"]],["heart",["g9","g26"]],["kidney",["g10"]],["liver",["g11","g27"]],["lung",["g12"]],["monocyte",["g13"]],["natural killer cell",["g14"]],["ovary",["g15","g28"]],["pancreas",["g16"]],["platelet",["g17"]],["prostate gland",["g18"]],["rectum",["g19"]],["retina",["g20"]],["spinal cord",["g21"]],["testis",["g22","g30"]],["urinary bladder",["g23"]],["brain",["g24"]],["gut",["g25"]],["placenta",["g29"]]]},{"name":"DEVELOPMENTAL_STAGE","primary":true,"selected":["adult"],"groupings":[["adult",["g1","g2","g3","g4","g5","g6","g7","g8","g9","g10","g11","g12","g13","g14","g15","g16","g17","g18","g19","g20","g21","g22","g23"]],["fetus",["g24","g25","g26","g27","g28","g29","g30"]]]},{"name":"ORGANISM","primary":false,"selected":"all","groupings":[["Homo sapiens",["g1","g2","g3","g4","g5","g6","g7","g8","g9","g10","g11","g12","g13","g14","g15","g16","g17","g18","g19","g20","g21","g22","g23","g24","g25","g26","g27","g28","g29","g30"]]]}],"genesDistributedByCutoffUrl":"json/experiments/E-PROT-1/genedistribution?experimentType\u003dPROTEOMICS_BASELINE","availableDataUnits":[]}},{"type":"experiment-design","name":"Experiment Design","props":{"table":{"headers":[{"name":"","values":["Run"]},{"name":"Sample Characteristics","values":["organism","developmental stage","organism part"]},{"name":"Experimental Variables","values":["developmental stage","organism part"]}],"data":[{"properties":{"analysed":true},"values":[["Adult_Adrenalgland"],["Homo sapiens","adult","adrenal gland"],["adult","adrenal gland"]]},{"properties":{"analysed":true},"values":[["Adult_Bcells"],["Homo sapiens","adult","B cell"],["adult","B cell"]]},{"properties":{"analysed":true},"values":[["Adult_CD4Tcells"],["Homo sapiens","adult","CD4-positive T cell"],["adult","CD4-positive T cell"]]},{"properties":{"analysed":true},"values":[["Adult_CD8Tcells"],["Homo sapiens","adult","CD8-positive T cell"],["adult","CD8-positive T cell"]]},{"properties":{"analysed":true},"values":[["Adult_Colon"],["Homo sapiens","adult","colon"],["adult","colon"]]},{"properties":{"analysed":true},"values":[["Adult_Esophagus"],["Homo sapiens","adult","esophagus"],["adult","esophagus"]]},{"properties":{"analysed":true},"values":[["Adult_Frontalcortex"],["Homo sapiens","adult","frontal cortex"],["adult","frontal cortex"]]},{"properties":{"analysed":true},"values":[["Adult_Gallbladder"],["Homo sapiens","adult","gall bladder"],["adult","gall bladder"]]},{"properties":{"analysed":true},"values":[["Adult_Heart"],["Homo sapiens","adult","heart"],["adult","heart"]]},{"properties":{"analysed":true},"values":[["Adult_Kidney"],["Homo sapiens","adult","kidney"],["adult","kidney"]]},{"properties":{"analysed":true},"values":[["Adult_Liver"],["Homo sapiens","adult","liver"],["adult","liver"]]},{"properties":{"analysed":true},"values":[["Adult_Lung"],["Homo sapiens","adult","lung"],["adult","lung"]]},{"properties":{"analysed":true},"values":[["Adult_Monocytes"],["Homo sapiens","adult","monocyte"],["adult","monocyte"]]},{"properties":{"analysed":true},"values":[["Adult_NKcells"],["Homo sapiens","adult","natural killer cell"],["adult","natural killer cell"]]},{"properties":{"analysed":true},"values":[["Adult_Ovary"],["Homo sapiens","adult","ovary"],["adult","ovary"]]},{"properties":{"analysed":true},"values":[["Adult_Pancreas"],["Homo sapiens","adult","pancreas"],["adult","pancreas"]]},{"properties":{"analysed":true},"values":[["Adult_Platelets"],["Homo sapiens","adult","platelet"],["adult","platelet"]]},{"properties":{"analysed":true},"values":[["Adult_Prostate"],["Homo sapiens","adult","prostate gland"],["adult","prostate gland"]]},{"properties":{"analysed":true},"values":[["Adult_Rectum"],["Homo sapiens","adult","rectum"],["adult","rectum"]]},{"properties":{"analysed":true},"values":[["Adult_Retina"],["Homo sapiens","adult","retina"],["adult","retina"]]},{"properties":{"analysed":true},"values":[["Adult_Spinalcord"],["Homo sapiens","adult","spinal cord"],["adult","spinal cord"]]},{"properties":{"analysed":true},"values":[["Adult_Testis"],["Homo sapiens","adult","testis"],["adult","testis"]]},{"properties":{"analysed":true},"values":[["Adult_Urinarybladder"],["Homo sapiens","adult","urinary bladder"],["adult","urinary bladder"]]},{"properties":{"analysed":true},"values":[["Fetal_Brain"],["Homo sapiens","fetus","brain"],["fetus","brain"]]},{"properties":{"analysed":true},"values":[["Fetal_Gut"],["Homo sapiens","fetus","gut"],["fetus","gut"]]},{"properties":{"analysed":true},"values":[["Fetal_Heart"],["Homo sapiens","fetus","heart"],["fetus","heart"]]},{"properties":{"analysed":true},"values":[["Fetal_Liver"],["Homo sapiens","fetus","liver"],["fetus","liver"]]},{"properties":{"analysed":true},"values":[["Fetal_Ovary"],["Homo sapiens","fetus","ovary"],["fetus","ovary"]]},{"properties":{"analysed":true},"values":[["Fetal_Placenta"],["Homo sapiens","fetus","placenta"],["fetus","placenta"]]},{"properties":{"analysed":true},"values":[["Fetal_Testis"],["Homo sapiens","fetus","testis"],["fetus","testis"]]}]},"downloadUrl":"experiments-content/E-PROT-1/resources/experiment-design"}},{"type":"multipart","name":"Supplementary Information","props":{"sections":[{"type":"static-table","name":"Analysis Methods","props":{"data":[["Pipeline ","Please see \u003ca href\u003d\"https://www.ebi.ac.uk/gxa/experiments/E-PROT-1/analysis-methods/HumanDataAnalysisFigure.pdf\"\u003eWorkflow\u003c/a\u003e and \u003ca href\u003d\"https://www.ebi.ac.uk/gxa/experiments/E-PROT-1/analysis-methods/HumanDataAnalysisMethods.pdf\"\u003eMethods\u003c/a\u003e for more information."],["Protein to Gene Mapping","   Ensembl 76/GENCODE 20 (GRCh38)"]]}},{"type":"resources","name":"Resources","props":{"url":"http://www-test.ebi.ac.uk/gxa/json/experiments/E-PROT-1/resources/SUPPLEMENTARY_INFORMATION"}}]}},{"type":"resources","name":"Downloads","props":{"url":"http://www-test.ebi.ac.uk/gxa/json/experiments/E-PROT-1/resources/DATA"}}]},
+    content: {
+      "experimentAccession": "E-PROT-1",
+      "experimentType": "PROTEOMICS_BASELINE",
+      "accessKey": "",
+      "species": "homo sapiens",
+      "disclaimer": "",
+      "tabs": [{
+        "type": "heatmap", "name": "Results", "props": {
+          "groups": [{
+            "name": "ORGANISM_PART",
+            "primary": true,
+            "selected": "all",
+            "groupings": [["adrenal gland", ["g1"]], ["B cell", ["g2"]], ["CD4-positive T cell", ["g3"]], ["CD8-positive T cell", ["g4"]], ["colon", ["g5"]], ["esophagus", ["g6"]], ["frontal cortex", ["g7"]], ["gall bladder", ["g8"]], ["heart", ["g9", "g26"]], ["kidney", ["g10"]], ["liver", ["g11", "g27"]], ["lung", ["g12"]], ["monocyte", ["g13"]], ["natural killer cell", ["g14"]], ["ovary", ["g15", "g28"]], ["pancreas", ["g16"]], ["platelet", ["g17"]], ["prostate gland", ["g18"]], ["rectum", ["g19"]], ["retina", ["g20"]], ["spinal cord", ["g21"]], ["testis", ["g22", "g30"]], ["urinary bladder", ["g23"]], ["brain", ["g24"]], ["gut", ["g25"]], ["placenta", ["g29"]]]
+          }, {
+            "name": "DEVELOPMENTAL_STAGE",
+            "primary": true,
+            "selected": ["adult"],
+            "groupings": [["adult", ["g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8", "g9", "g10", "g11", "g12", "g13", "g14", "g15", "g16", "g17", "g18", "g19", "g20", "g21", "g22", "g23"]], ["fetus", ["g24", "g25", "g26", "g27", "g28", "g29", "g30"]]]
+          }, {
+            "name": "ORGANISM",
+            "primary": false,
+            "selected": "all",
+            "groupings": [["Homo sapiens", ["g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8", "g9", "g10", "g11", "g12", "g13", "g14", "g15", "g16", "g17", "g18", "g19", "g20", "g21", "g22", "g23", "g24", "g25", "g26", "g27", "g28", "g29", "g30"]]]
+          }],
+          "genesDistributedByCutoffUrl": "json/experiments/E-PROT-1/genedistribution?experimentType\u003dPROTEOMICS_BASELINE",
+          "availableDataUnits": []
+        }
+      }, {
+        "type": "experiment-design", "name": "Experiment Design", "props": {
+          "table": {
+            "headers": [{"name": "", "values": ["Run"]}, {
+              "name": "Sample Characteristics",
+              "values": ["organism", "developmental stage", "organism part"]
+            }, {"name": "Experimental Variables", "values": ["developmental stage", "organism part"]}],
+            "data": [{
+              "properties": {"analysed": true},
+              "values": [["Adult_Adrenalgland"], ["Homo sapiens", "adult", "adrenal gland"], ["adult", "adrenal gland"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Bcells"], ["Homo sapiens", "adult", "B cell"], ["adult", "B cell"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_CD4Tcells"], ["Homo sapiens", "adult", "CD4-positive T cell"], ["adult", "CD4-positive T cell"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_CD8Tcells"], ["Homo sapiens", "adult", "CD8-positive T cell"], ["adult", "CD8-positive T cell"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Colon"], ["Homo sapiens", "adult", "colon"], ["adult", "colon"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Esophagus"], ["Homo sapiens", "adult", "esophagus"], ["adult", "esophagus"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Frontalcortex"], ["Homo sapiens", "adult", "frontal cortex"], ["adult", "frontal cortex"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Gallbladder"], ["Homo sapiens", "adult", "gall bladder"], ["adult", "gall bladder"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Heart"], ["Homo sapiens", "adult", "heart"], ["adult", "heart"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Kidney"], ["Homo sapiens", "adult", "kidney"], ["adult", "kidney"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Liver"], ["Homo sapiens", "adult", "liver"], ["adult", "liver"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Lung"], ["Homo sapiens", "adult", "lung"], ["adult", "lung"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Monocytes"], ["Homo sapiens", "adult", "monocyte"], ["adult", "monocyte"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_NKcells"], ["Homo sapiens", "adult", "natural killer cell"], ["adult", "natural killer cell"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Ovary"], ["Homo sapiens", "adult", "ovary"], ["adult", "ovary"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Pancreas"], ["Homo sapiens", "adult", "pancreas"], ["adult", "pancreas"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Platelets"], ["Homo sapiens", "adult", "platelet"], ["adult", "platelet"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Prostate"], ["Homo sapiens", "adult", "prostate gland"], ["adult", "prostate gland"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Rectum"], ["Homo sapiens", "adult", "rectum"], ["adult", "rectum"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Retina"], ["Homo sapiens", "adult", "retina"], ["adult", "retina"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Spinalcord"], ["Homo sapiens", "adult", "spinal cord"], ["adult", "spinal cord"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Testis"], ["Homo sapiens", "adult", "testis"], ["adult", "testis"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Adult_Urinarybladder"], ["Homo sapiens", "adult", "urinary bladder"], ["adult", "urinary bladder"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Fetal_Brain"], ["Homo sapiens", "fetus", "brain"], ["fetus", "brain"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Fetal_Gut"], ["Homo sapiens", "fetus", "gut"], ["fetus", "gut"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Fetal_Heart"], ["Homo sapiens", "fetus", "heart"], ["fetus", "heart"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Fetal_Liver"], ["Homo sapiens", "fetus", "liver"], ["fetus", "liver"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Fetal_Ovary"], ["Homo sapiens", "fetus", "ovary"], ["fetus", "ovary"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Fetal_Placenta"], ["Homo sapiens", "fetus", "placenta"], ["fetus", "placenta"]]
+            }, {
+              "properties": {"analysed": true},
+              "values": [["Fetal_Testis"], ["Homo sapiens", "fetus", "testis"], ["fetus", "testis"]]
+            }]
+          }, "downloadUrl": "experiments-content/E-PROT-1/resources/experiment-design"
+        }
+      },
+        {
+          "type": "multipart",
+          "name": "Supplementary Information",
+          "props": {
+            "sections": [{
+              "type": "static-table",
+              "name": "Analysis Methods",
+              "props": {
+                "data": [
+                  ["Pipeline ",
+                    "Please see \u003ca href\u003d\"https://www.ebi.ac.uk/gxa/experiments/E-PROT-1/analysis-methods/HumanDataAnalysisFigure.pdf\"\u003eWorkflow\u003c/a\u003e and \u003ca href\u003d\"https://www.ebi.ac.uk/gxa/experiments/E-PROT-1/analysis-methods/HumanDataAnalysisMethods.pdf\"\u003eMethods\u003c/a\u003e for more information."
+                  ],
+                  ["Protein to Gene Mapping",
+                    "   Ensembl 76/GENCODE 20 (GRCh38)"
+                  ]
+                ]
+              }
+            }]
+          }
+        }, {
+          "type": "resources",
+          "name": "Downloads",
+          "props": {"url": "json/experiments/E-PROT-1/resources/DATA"}
+        }]
+    },
     target: "experiment-page"
-  });
+  })
 </script>
 
 </html>
