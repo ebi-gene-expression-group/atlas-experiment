@@ -105,8 +105,8 @@ class ResourcesTab extends Component {
       )
     } else if (resourcesFetch.fulfilled) {
       const resources = resourcesFetch.value;
-      const archiveResources = resources.filter(value => value.isExternalResource );
-      const metadataResources = resources.filter(value => !value.isExternalResource );
+      const archiveResources = resources.filter(value => value.isArchiveResource );
+      const metadataResources = resources.filter(value => !value.isArchiveResource );
 
       const tabName = url.split('/').pop();
       const downloadTabName = `DATA`
