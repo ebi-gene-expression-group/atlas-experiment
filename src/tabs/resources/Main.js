@@ -115,8 +115,7 @@ class ResourcesTab extends Component {
         resourcesFetch.value.length >= 1 &&
         <DisclaimerWrapper disclaimer={disclaimer}>
           <div className={`small-12 columns margin-bottom-xlarge`}>
-            <h3 key={`title`}>Curated Analysis Files</h3>
-            <p>Processed expression data, experimental design, and R-ready results:</p>
+            <h3 key={`title`}>Analysis Results</h3>
             <ResourcesSection
               values={metadataResources}
               {...{pathToResources, atlasUrl}} />
